@@ -3,10 +3,8 @@ title: Ml Regressor Ui
 emoji: 🚀
 colorFrom: red
 colorTo: red
-sdk: docker
-app_port: 8501
-tags:
-- streamlit
+sdk: streamlit
+app_file: app.py
 pinned: false
 short_description: AI/ML MLP regressor with a User Interface
 license: mit

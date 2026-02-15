@@ -40,6 +40,7 @@ Loss function: Mean Squared Error loss
  
 
 ## How to run   
+Go to https://huggingface.co/spaces/aj6767/ml_regressor_ui  
 Input values for the model and data on the left panel   
 Press the button to Write baseline.yaml + Run training    
 Wait for training to finish   

@@ -1,19 +1,13 @@
----
-title: Ml Regressor Ui
-emoji: 🚀
-colorFrom: red
-colorTo: red
-sdk: streamlit
-app_file: app.py
-pinned: false
-short_description: AI/ML MLP regressor with a User Interface
-license: mit
----
-
-# PyTorch Regression Pipeline (End-to-End)
+# Interactive PyTorch Regression Pipeline in a data app
 
 This repo demonstrates an end-to-end PyTorch machine learning workflow for regression using a user interface:
-**data loading → train/val/test split → preprocessing (no leakage) → training → validation → checkpointing → final testing**.
+**data loading → train/val/test split → preprocessing (no leakage) → training → validation → checkpointing → final testing**.  
+## https://huggingface.co/spaces/aj6767/ml_regressor_ui  
+
+## Demo  
+![Demo](/demo.gif)  
+<img src="assets/demo.gif" width="800" />   
+
 
 ## Features
 - Proper train/val/test split with reproducible seeding

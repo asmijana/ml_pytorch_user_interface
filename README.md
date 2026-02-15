@@ -51,41 +51,33 @@ Observe results including training details, loss curves, and parity plots
 ├─ README.md                    # This file
 ├─ requirements.txt
 ├─ app.py
+├─ demo.gif
 ├─ .gitignore
 ├─ configs/
 │  └─ baseline.yaml             # Contains user-provided data and model details
-├─ scripts/
-│  └─ download_data.py          # Downloads the required dataset into csv format
 ├─ data/raw/
 │  └─ california_housing.csv    # The downloaded dataset
-├─ src/
-│  ├─ __init__.py
-│  ├─ main.py               
-│  ├─ data/
-│  │  ├─ __init__.py
-│  │  ├─ make_dataset.py        # Takes the raw data (csv format), separates into (X, y) data
-│  │  ├─ preprocess.py          # Scales and transforms the X data
-│  │  └─ split.py               # Splits (X, y) into train, validation, and test datasets
-│  ├─ models/
-│  │  ├─ __init__.py
-│  │  └─ mlp.py                 # Defines the ML Regressor model 
-│  ├─ train/
-│  │  ├─ __init__.py
-│  │  ├─ engine.py              # Defines training and evaluation functions
-│  │  ├─ metrics.py             # Defines the error metrics: Loss, RMSE, MAE, and R^2
-│  │  └─ callbacks.py           # Defines early stopping condition
-│  └─  utils/
-│     ├─ __init__.py
-│     ├─ config.py              # Misc functions to load yaml files
-│     ├─ io.py                  # Misc functions to save and load json and checkpoint files
-│     └─ seed.py                # Ensures reproducibility and deterministic modeling
-└─ runs/<exp_name>/             # Results folder
-      ├─ checkpoints/       
-      │  └─ best.pt             # The best checkpoint stored
-      ├─ data_summary.json      # Data summary from the dataset
-      ├─ test_summary.json      # Test summary from the model
-      ├─ metrics.csv            # Train and validation losses along with validation RMSE, MAE, R^2 logged
-      ├─ loss_curve.png         # Train and validation losses plotted
-      └─ parity_xyz.png         # Parity plots; xyz: train, val, and test
+└─ src/
+   ├─ __init__.py
+   ├─ main.py               
+   ├─ data/
+   │  ├─ __init__.py
+   │  ├─ make_dataset.py        # Takes the raw data (csv format), separates into (X, y) data
+   │  ├─ preprocess.py          # Scales and transforms the X data
+   │  └─ split.py               # Splits (X, y) into train, validation, and test datasets
+   ├─ models/
+   │  ├─ __init__.py
+   │  └─ mlp.py                 # Defines the ML Regressor model 
+   ├─ train/
+   │  ├─ __init__.py
+   │  ├─ engine.py              # Defines training and evaluation functions
+   │  ├─ metrics.py             # Defines the error metrics: Loss, RMSE, MAE, and R^2
+   │  └─ callbacks.py           # Defines early stopping condition
+   └─  utils/
+      ├─ __init__.py
+      ├─ config.py              # Misc functions to load yaml files
+      ├─ io.py                  # Misc functions to save and load json and checkpoint files
+      └─ seed.py                # Ensures reproducibility and deterministic modeling
+
 
 ```

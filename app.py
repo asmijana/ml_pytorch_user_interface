@@ -8,6 +8,10 @@ import streamlit as st
 import json
 import sys
 
+st.markdown(
+    "<style>html { overflow-y: scroll; }</style>",
+    unsafe_allow_html=True
+)
 st.sidebar.write("Streamlit Python:", sys.executable)
 try:
     import torch
@@ -41,6 +45,16 @@ def run_training(config_path: Path) -> subprocess.CompletedProcess:
 # Streamlit UI
 # ---------------------------
 st.set_page_config(page_title="PyTorch MLP Regression UI", layout="wide")
+st.markdown(
+    """
+    <style>
+      html { scrollbar-gutter: stable both-edges; }
+      body { overflow-x: hidden; }
+      div.block-container { max-width: 1400px; width: 100%; }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 st.title("PyTorch MLP Regression UI → writes configs/baseline.yaml → trains → plots")
 
 cfg_path = Path("configs/baseline.yaml")
@@ -147,7 +161,7 @@ test_summary = run_dir / "test_summary.json"
 if metrics_csv.exists():
     df = pd.read_csv(metrics_csv)
     st.write("Metrics (last 10 rows):")
-    st.dataframe(df.tail(10), use_container_width=True)
+    st.dataframe(df.tail(10), use_container_width=True, height=320)
     st.line_chart(df.set_index("epoch")[["train_loss", "val_loss"]])
 
     #if loss_png.exists():
